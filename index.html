@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertisseur de Monnaie</title>
+  <!-- Ajout des liens Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #converter {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div id="converter" class="container">
+  <h2 class="mb-4">Convertisseur de Monnaie</h2>
+  <form id="conversionForm">
+    <div class="form-group">
+      <label for="amount">Montant à convertir:</label>
+      <input type="number" class="form-control" id="amount" step="0.01" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="baseCurrency">Devise de base:</label>
+      <select class="form-control" id="baseCurrency" required></select>
+    </div>
+    
+    <div class="form-group">
+      <label for="targetCurrency">Devise cible:</label>
+      <select class="form-control" id="targetCurrency" required></select>
+    </div>
+    
+    <button type="button" class="btn btn-primary" onclick="convertCurrency()">Convertir</button>
+  </form>
+
+  <div id="result" class="mt-4"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
